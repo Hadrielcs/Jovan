@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYSTEM WARNING: ACCESS DENIED</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #0a0a0a;
+            color: #00ff66;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        /* Matrix rain effect background simulation */
+        .bg-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(0,255,102,0.05) 0%, rgba(0,0,0,0) 70%);
+            z-index: 1;
+        }
+
+        .terminal-card {
+            background-color: #111111;
+            border: 2px solid #00ff66;
+            box-shadow: 0 0 20px rgba(0, 255, 102, 0.4);
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            animation: glitch 1s infinite alternate;
+        }
+
+        .warning-header {
+            color: #ff3333;
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .divider {
+            height: 2px;
+            background-color: #00ff66;
+            margin: 15px 0;
+            box-shadow: 0 0 8px #00ff66;
+        }
+
+        .main-text {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            color: #ffffff;
+        }
+
+        /* The Ultimate Shock Element */
+        .target-name {
+            display: inline-block;
+            background-color: #00ff66;
+            color: #000000;
+            padding: 5px 15px;
+            font-weight: bold;
+            font-size: 1.5rem;
+            border-radius: 4px;
+            margin-top: 10px;
+            box-shadow: 0 0 15px #00ff66;
+            text-transform: uppercase;
+        }
+
+        .footer-status {
+            font-size: 0.8rem;
+            color: #888888;
+            margin-top: 20px;
+        }
+
+        .blink {
+            animation: blinker 1s linear infinite;
+        }
+
+        @keyframes blinker {
+            50% { opacity: 0; }
+        }
+
+        /* Subtle screen vibration for hacking vibe */
+        @keyframes glitch {
+            0% { transform: translate(0, 0); }
+            20% { transform: translate(-1px, 1px); }
+            40% { transform: translate(-1px, -1px); }
+            60% { transform: translate(1px, 1px); }
+            80% { transform: translate(1px, -1px); }
+            100% { transform: translate(0, 0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-glow"></div>
+
+    <div class="terminal-card">
+        <div class="warning-header">⚠️ WARNING ⚠️</div>
+        <div class="blink" style="color: #ff3333; font-weight: bold;">SECURE DATABASE COMPROMISED</div>
+        
+        <div class="divider"></div>
+        
+        <p class="main-text">
+            This network server has been completely taken over. System controls are now tracking the master administrator:
+            <br>
+            <span class="target-name">Jovan</span>
+        </p>
+        
+        <div class="divider"></div>
+        
+        <div class="footer-status">
+            STATUS: <span style="color: #00ff66;">RUNNING CLOUDFLARE BYPASS...</span><br>
+            IP TRACKING: ACTIVE <br>
+            <span class="blink" style="color: #00ff66;">_</span>
+        </div>
+    </div>
+
+</body>
+</html>
